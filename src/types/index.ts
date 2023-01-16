@@ -2,6 +2,7 @@ import { AuthProviderActionType } from '../constants';
 
 export type AuthState = {
   user: {
+    name: any | null;
     id: string | number;
   } | null;
   auth: {
@@ -15,6 +16,10 @@ export type AuthState = {
   } | null;
 };
 
+export type AuthStateUserObject = {
+  [x: string]: any;
+}
+
 export type AuthProviderAction = {
   type: AuthProviderActionType;
   payload: any;
@@ -23,3 +28,12 @@ export type AuthProviderAction = {
 export type AuthContextPropsType = AuthState & {
   dispatch: React.Dispatch<AuthProviderAction>;
 };
+export interface AuthProviderProps {
+  authType: 'localstorage'
+  authName: string,
+  // refresh?: createRefreshParamInterface
+  // cookieDomain?: string
+  // cookieSecure?: boolean
+  children: React.ReactNode
+}
+
