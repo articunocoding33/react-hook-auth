@@ -6,7 +6,7 @@ interface signInFunctionParams {
   token: string;
   tokenType: string | 'Bearer';
   expiresIn: number;
-  user?: AuthState;
+  user?: AuthState['user'];
   refreshToken?: string;
   refreshTokenExpireIn?: number;
 }

@@ -1,7 +1,9 @@
 import { AuthProviderActionType } from '../constants';
 
 export type AuthState = {
-  user: null;
+  user: {
+    id: string | number;
+  } | null;
   auth: {
     token: string;
     type: string;
