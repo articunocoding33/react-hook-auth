@@ -1,9 +1,9 @@
-import { useAuth } from 'react-hook-auth';
+import { useSignIn } from 'react-hook-auth';
 import reactLogo from './assets/react.svg';
 import './App.css';
 
 const App = () => {
-  const auth = useAuth();
+  useSignIn();
 
   return (
     <div className="App">
